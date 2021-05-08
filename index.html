@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h2 class = "heading">Welcome To ROCK PAPER SCICCORS</h2>
+    <div class="main">
+        <section class="box">
+            <div class="score_home">
+                <h2>
+                    <span>ROCK</span>
+                    <span>PAPER</span>
+                    <span>SCISSSORS</span>
+                </h2>
+                <div class = "score_win">
+                    <p>Matches You Won</p>
+                    <div class="score">
+                        <h3>Score</h3>
+                        <p id="score_p">0</p>
+                    </div>
+                </div>
+                <div>
+                    <button id="rules_btn">Rules</button>
+                </div>
+            </div>
+            <div class="game" id="game">
+                <div class="game_panel" id = "game_panel">
+                    <button id = "rock" class="rock">
+                        <img src="Images/rock.jpeg" alt="Rock">
+                    </button>
+                    <button id = "paper" class="paper">
+                        <img src="Images/paper.jpeg" alt="Paper">
+                    </button>
+                    <button id = "scissor" class="scissor">
+                        <img src="Images/scissor.jpeg" alt="Scissors">
+                    </button>
+                </div>
+                <div class="displayChoice" id = "displayChoice"> 
+                    <div> 
+                        <p>YOUR CHOICE</p>
+                        <button id= "userSelection" class="rock">
+                            <img src="Images/rock.jpeg" alt="Rock">
+                        </button>
+                    </div>
+                    <div><p id="win">Let's Start</p></div>
+                    <div>
+                        <p>COMPUTER'S CHOICE</p>
+                        <button id = "compSelection" class="rock">
+                            <img src="Images/rock.jpeg" alt="Rock">
+                        </button>
+                    </div>
+                </div>
+                <div class="winner" id = "winner">
+                    <div class="dis_score">
+                        <p>Your Score</p>
+                        <span id= "userScore"></span>
+                    </div>
+                    <div class="decision">
+                        <p id = "winner_decision"></p>
+                        <button id = "play">Play Again</button>
+                    </div>
+                    <div class="dis_score">
+                        <p>Computer Score</p>
+                        <span id = "computerScore"></span>
+                    </div>
+                </div>
+                <p>You have 5 Chances is each match without draw.</p>
+            </div>
+            <div class="rules" id="rules">
+                <div class="first">
+                    <button id = "paper" class="paper">
+                        <img src="Images/paper.jpeg" alt="Paper">
+                    </button>
+                    <p>Beats</p>
+                    <button id = "rock" class="rock">
+                        <img src="Images/rock.jpeg" alt="Rock">
+                    </button>
+                </div>
+                <div class="second">
+                    <button id = "rock" class="rock">
+                        <img src="Images/rock.jpeg" alt="Rock">
+                    </button>
+                    <p>Beats</p>
+                    <button id = "scissor" class="scissor">
+                        <img src="Images/scissor.jpeg" alt="Scissors">
+                    </button>
+                </div>
+                <div class="third">
+                    <button id = "scissor" class="scissor">
+                        <img src="Images/scissor.jpeg" alt="Scissors">
+                    </button>
+                    <p>Beats</p>
+                    <button id = "paper" class="paper">
+                        <img src="Images/paper.jpeg" alt="Paper">
+                    </button>
+                </div>
+                <div>
+                    <button id="exit">Exit</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    <script src="index.js"></script>
+</body>
+</html>
