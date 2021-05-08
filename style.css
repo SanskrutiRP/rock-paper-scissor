@@ -4,19 +4,22 @@
     box-sizing: border-box;
 }
 
-.main{
-    min-height: 100vh;
+body{
     background: linear-gradient(to right top, #000418, #01072b);
+}
+.main{
+    min-height:fit-content;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     color: rgb(251, 255, 255);
     font-family: nudista-web;
+    margin-top: 3rem;
 }
 
 .box{
-    min-height: 80vh;
+    min-height: fit-content;
     width: 60%;
     background: linear-gradient(
         to right bottom,
@@ -29,26 +32,7 @@
     display: flex;
 }
 
-.circle,
-.circle1{
-    background: linear-gradient(to right bottom,
-    rgba(255,255,255,0.2),
-    rgba(27, 22, 104, 0.3));
-    height: 10rem;
-    width: 10rem;
-    position: absolute;
-    border-radius: 50%;
-}
 
-.circle{
-    top: 5%;
-    right: 15%;
-}
-
-.circle1{
-    bottom: 2%;
-    left: 10%;
-}
 
 .score_home{
     flex: 1;
@@ -56,6 +40,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background: linear-gradient(
         to right bottom,
       rgba(31, 31, 32, 0.3),
@@ -75,8 +60,8 @@ h2{
     margin-top: 70px;
 }
 .score{
-    min-height: 6rem;
-    min-width: 7rem;
+    min-height: 5rem;
+    min-width: 5rem;
     background: linear-gradient(
         to left top,
       rgb(9, 8, 41),
@@ -100,6 +85,7 @@ h2{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .rock,
@@ -146,7 +132,7 @@ img:active{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 250px;
     width: 300px;
     margin: 0 auto;
@@ -159,10 +145,10 @@ img:active{
 }
 .displayChoice{
     display: flex;
-    flex-direction: row;
     align-items:center;
+    justify-content: center;
+    text-align: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     font-weight: bold;
 }
 .displayChoice div{
