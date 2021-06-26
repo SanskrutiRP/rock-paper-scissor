@@ -58,7 +58,7 @@ function chooseWinner(){
             console.log('Computer won');
             count++;
             winStatus.innerText = 'Computer won';
-            updateScore(-1);
+            updateScoreComp(1);
         }
     }
     else{
@@ -69,7 +69,10 @@ function chooseWinner(){
 //update score
 function updateScore(value){
     userScore += value;
-    computerScore -= value;
+    //computerScore -= value;
+}
+function updateScoreComp(value){
+    computerScore +=value;
 }
 
 // update selection
@@ -112,6 +115,8 @@ play.addEventListener('click', () => {
     game.style.display = 'flex';
     detail.style.display = 'flex'; 
     count = 0;
+    userScore = 0;
+    computerScore = 0;
     winStatus.innerText = `Let's Start`;
     buttons.forEach((button) =>{
         button.disabled = false;

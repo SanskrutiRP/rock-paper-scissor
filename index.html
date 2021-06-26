@@ -8,7 +8,10 @@
     
 </head>
 <body>
-    <h2 class = "heading">Welcome To ROCK PAPER SCICCORS</h2>
+    <div class = "heading">
+        <h2>Welcome To ROCK PAPER SCICCORS</h2>
+        <button id="rules_btn">Rules</button>
+    </div>
     <div class="main">
         <section class="box">
             <div class="score_home">
@@ -18,14 +21,15 @@
                     <span>SCISSSORS</span>
                 </h2>
                 <div class = "score_win">
-                    <p>Matches You Won</p>
+                    <!--<p>Matches You Won</p>-->
                     <div class="score">
-                        <h3>Score</h3>
-                        <p id="score_p">0</p>
+                        <h3>You Won</h3>
+                        <span id="score_p">0</span>
+                        <span>Matches</span>
                     </div>
-                </div>
-                <div>
-                    <button id="rules_btn">Rules</button>
+                <!--</div>
+                <div>-->
+                    
                 </div>
             </div>
             <div class="game" id="game">
@@ -41,15 +45,15 @@
                     </button>
                 </div>
                 <div class="displayChoice" id = "displayChoice"> 
-                    <div> 
-                        <p>YOUR CHOICE</p>
+                    <div class="go-down"> 
+                        <span>YOUR</span> <span>CHOICE</span>
                         <button id= "userSelection" class="rock">
                             <img src="Images/rock.jpeg" alt="Rock">
                         </button>
                     </div>
                     <div class="go-down"><p id="win">Let's Start</p></div>
-                    <div>
-                        <p>COMPUTER'S CHOICE</p>
+                    <div class="go-down">
+                        <span>COMPUTER'S</span> <span>CHOICE</span>
                         <button id = "compSelection" class="rock">
                             <img src="Images/rock.jpeg" alt="Rock">
                         </button>
@@ -69,7 +73,7 @@
                         <span id = "computerScore"></span>
                     </div>
                 </div>
-                <p>You have 5 Chances is each match without draw.</p>
+                <p>You have 5 Chances in each match without draw.</p>
             </div>
             <div class="rules" id="rules">
                 <div class="first">

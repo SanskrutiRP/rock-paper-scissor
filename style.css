@@ -1,11 +1,18 @@
-* {
+/* {
     margin: 0;
     padding : 0;
     box-sizing: border-box;
-}
+}*/
 
 body{
-    background: linear-gradient(to right top, #000418, #01072b);
+    background: rgb(0, 0, 10);
+    color: rgb(251, 255, 255);
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .main{
     min-height:fit-content;
@@ -13,7 +20,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    color: rgb(251, 255, 255);
     font-family: nudista-web;
     margin-top: 3rem;
 }
@@ -23,29 +29,38 @@ body{
     width: 60%;
     background: linear-gradient(
         to right bottom,
-      rgba(102, 102, 104, 0.5),
-      rgba(8, 19, 53, 0.3)
+      rgba(45, 45, 46, 0.3),
+      rgba(7, 13, 46, 0.2)
     );
     border-radius: 1rem;
-    z-index: 1;
-    backdrop-filter: blur(1rem);
-    display: flex;
+    border-color: white;
+    border-width: 0.2rem;
+    border-style: solid;
+    padding: 1rem;
 }
 
 
 
 .score_home{
-    flex: 1;
+/*    flex: 1;*/
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    background: linear-gradient(
+    /*background: linear-gradient(
         to right bottom,
       rgba(31, 31, 32, 0.3),
       rgba(3, 13, 68, 0.2)
-    );
+    );*/
+    color: rgb(4, 4, 31);
+    background-color: white;
+    /* box-shadow: 0 1px 1px rgba(252, 251, 251, 0.25),
+                0 2px 2px rgba(236, 235, 235, 0.20),
+                0 4px 4px rgba(247, 247, 247, 0.15),
+                0 8px 8px rgba(218, 217, 217, 0.10),
+                0 16px 16px rgba(228, 226, 226, 0.05),
+                0 32px 32px rgba(250, 249, 249, 0.01); */
     border-radius: 1rem;
 }
 
@@ -54,47 +69,52 @@ h2{
     display: flex;
     flex-direction: column;
     letter-spacing: 3px;
+    /*color: white;*/
 }
 
 .score_win{
-    margin-top: 70px;
+    /*margin-top: 70px;*/
 }
 .score{
-    min-height: 5rem;
+   /* min-height: 5rem;
     min-width: 5rem;
-    background: linear-gradient(
+    /*background: linear-gradient(
         to left top,
       rgb(9, 8, 41),
       rgba(39, 37, 37, 0.2)
-    );
+    );*/
+    padding: 10px;
+    border: 1px solid rgb(4, 4, 24);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 20px;
+    margin: 10px;
 }
 
 #rules_btn{
-    margin-top: 50px;
+   /* margin-top: 50px;*/
 }
 
 .game{
-    flex: 3;
+/*    flex: 3;*/
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .rock,
 .paper,
 .scissor{
     border-radius: 50%;
-    border-width: 0.5rem;
     margin: 0 20px;
-    border-color:rgb(4, 12, 22);
+    border: 2px solid white;
+    padding: 2px;
+    /*border-color:rgb(4, 12, 22);
+    border-width: 0.5rem;*/
 }
 
 img{
@@ -108,7 +128,7 @@ img:active{
 }
 
 .rules{
-    flex: 3;
+    /*flex: 3;*/
     margin-top: 20px;
     display: none;
     flex-direction: column;
@@ -131,12 +151,45 @@ img:active{
 .game_panel{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: center;
-    height: 250px;
-    width: 300px;
-    margin: 0 auto;
+    height: fit-content;
+    margin: 2rem 0 2rem 0;
+    width: 60%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px double white;
+/*    margin: 0 auto;*/
 }
+
+@media (max-width : 660px){
+    .box{
+        width: 80%;
+    }
+    body,
+    h2,
+    p{
+        font-size: 10px;
+    }
+    .game_panel{
+        width: 80%;
+        margin: 1rem 0 1rem 0;
+    }
+    .game_panel button{
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+@media (max-width : 400px){
+   /* .scissor{
+        order: 1;
+    }*/
+    img{
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
 .game p{
     font-size: 12px;
     border-radius: 10px;
@@ -149,18 +202,28 @@ img:active{
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+   /* width: 500px;*/
     font-weight: bold;
+}
+/*screen*/
+@media(max-width : 600px){
+    .decision{
+        order: 1;
+    }
+    
 }
 .displayChoice div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;    
+    padding: 10px;    
 }
 .displayChoice div span{
-    padding: 1rem;
+    padding: inherit;
 }
+
+
 .play{
     border-radius: 5px;
     box-shadow: 6px 6px 20px rgba(129, 128, 128, 0.6);
@@ -194,8 +257,43 @@ img:active{
 
 .decision{
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 button{
+    background-color: transparent;
     cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 0.3rem;
+}
+button:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:600px) {
+    .displayChoice{
+        flex-direction: column;
+    }
+    .spn{
+        display: inline;
+    }
+    .displayChoice div,
+    .displayChoice div span{
+        padding: 5px;
+    }
+    .game p{
+        font-size: 10px;
+    }
+    .dis_score{
+        margin: 1rem 1rem 1rem 1rem;
+    }
+    .go-down{
+        margin: 0;
+    }
 }
